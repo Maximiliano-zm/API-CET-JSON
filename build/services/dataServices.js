@@ -28,7 +28,7 @@ const callUrl = (url) => __awaiter(void 0, void 0, void 0, function* () {
     })
         .then((response) => __awaiter(void 0, void 0, void 0, function* () {
         console.log(response);
-        fs_1.default.writeFileSync('src/xlsx/Cotizacion.xlsx', Buffer.from(response.data));
+        fs_1.default.writeFileSync('/etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx', Buffer.from(response.data));
         let Ejc = yield excelToJson(Object.assign(Object.assign(Object.assign({}, sourceFile), sheets1), { range: "G16", header: {
                 rows: 12,
             }, columnToKey: {

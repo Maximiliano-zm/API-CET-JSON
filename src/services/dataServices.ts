@@ -15,7 +15,7 @@ const callUrl = async (url: string) => {
     .then(async (response) => {
       console.log(response);
       fs.writeFileSync(
-        'src/xlsx/Cotizacion.xlsx',
+        '/etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx',
         Buffer.from(response.data)
       );
       
