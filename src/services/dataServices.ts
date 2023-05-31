@@ -13,10 +13,12 @@ const callUrl = async (url: string) => {
       responseType: "arraybuffer",
     })
     .then(async (response) => {
+      console.log(response);
       fs.writeFileSync(
-        'src//xlsx//Cotizacion.xlsx',
+        'src/xlsx/Cotizacion.xlsx',
         Buffer.from(response.data)
       );
+      
       let Ejc = await excelToJson({
         ...sourceFile,
         ...sheets1,
@@ -117,9 +119,8 @@ const callUrl = async (url: string) => {
       return {Ejc,Vuf,Vutm,Usd,D365};
     })
     .catch((error) => {
-      console.log("error al cargar el archivo");
+      console.log()
       console.log(error.message);
-      console.log(Response);
     });
 };
 

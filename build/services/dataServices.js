@@ -27,7 +27,8 @@ const callUrl = (url) => __awaiter(void 0, void 0, void 0, function* () {
         responseType: "arraybuffer",
     })
         .then((response) => __awaiter(void 0, void 0, void 0, function* () {
-        fs_1.default.writeFileSync('src//xlsx//Cotizacion.xlsx', Buffer.from(response.data));
+        console.log(response);
+        fs_1.default.writeFileSync('src/xlsx/Cotizacion.xlsx', Buffer.from(response.data));
         let Ejc = yield excelToJson(Object.assign(Object.assign(Object.assign({}, sourceFile), sheets1), { range: "G16", header: {
                 rows: 12,
             }, columnToKey: {
@@ -98,9 +99,8 @@ const callUrl = (url) => __awaiter(void 0, void 0, void 0, function* () {
         return { Ejc, Vuf, Vutm, Usd, D365 };
     }))
         .catch((error) => {
-        console.log("error al cargar el archivo");
+        console.log();
         console.log(error.message);
-        console.log(Response);
     });
 });
 exports.default = { callUrl };
