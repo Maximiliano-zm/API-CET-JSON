@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const excelToJson = require("convert-excel-to-json");
-const sourceFile = { sourceFile: "src//xlsx//FLUJO.xlsx" };
+const sourceFile = { sourceFile: "/etc/API/API-CET-JSON//src/xlsx/" };
 const sheets1 = { sheets: ["Carátula"] };
 const sheets2 = { sheets: ["Resumen 365 nuevo"] };
 const axios_1 = __importDefault(require("axios"));

@@ -1,5 +1,5 @@
 const excelToJson = require("convert-excel-to-json");
-const sourceFile = { sourceFile: "src//xlsx//FLUJO.xlsx" };
+const sourceFile = { sourceFile: "/etc/API/API-CET-JSON//src/xlsx/" };
 const sheets1 = { sheets: ["Carátula"] };
 const sheets2 = { sheets: ["Resumen 365 nuevo"] };
 import axios from "axios";
