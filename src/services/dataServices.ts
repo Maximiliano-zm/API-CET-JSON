@@ -14,7 +14,7 @@ const callUrl = async (url: string) => {
     })
     .then(async (response) => {
       fs.writeFileSync(
-        "src//xlsx//Cotizacion.xlsx",
+        'src//xlsx//Cotizacion.xlsx',
         Buffer.from(response.data)
       );
       let Ejc = await excelToJson({
