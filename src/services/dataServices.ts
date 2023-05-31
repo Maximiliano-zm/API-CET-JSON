@@ -1,5 +1,7 @@
 const excelToJson = require("convert-excel-to-json");
-const sourceFile = { sourceFile: "/etc/API/API-CET-JSON//src/xlsx/FLUJO.xlsx" };
+const sourceFile = { sourceFile: "//src//xlsx//FLUJO.xlsx" };
+// /etc/API/API-CET-JSON//src/xlsx/FLUJO.xlsx
+///etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx
 const sheets1 = { sheets: ["Carátula"] };
 const sheets2 = { sheets: ["Resumen 365 nuevo"] };
 import axios from "axios";
@@ -15,7 +17,7 @@ const callUrl = async (url: string) => {
     .then(async (response) => {
       console.log(response);
       fs.writeFileSync(
-        '/etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx',
+        '//src//xlsx//Cotizacion.xlsx',
         Buffer.from(response.data)
       );
       

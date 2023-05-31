@@ -17,7 +17,7 @@ const dataServices_1 = __importDefault(require("./services/dataServices"));
 const axios_1 = __importDefault(require("axios"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-const PORT = 3000;
+const PORT = 3001;
 app.listen(PORT, () => {
     console.log("-RUN-");
 });
