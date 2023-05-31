@@ -120,7 +120,6 @@ const callUrl = async (url: string) => {
       console.log("error al cargar el archivo");
       console.log(error.message);
       console.log(Response);
-      console.log(error.Response);
     });
 };
 
