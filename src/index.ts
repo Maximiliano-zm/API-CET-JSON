@@ -17,7 +17,6 @@ app.route("/data").get(async function (req, res) {
 });
 
 
-
 //fn prueba
 app.route("/pruebaData").get(async (req, res) => {
 

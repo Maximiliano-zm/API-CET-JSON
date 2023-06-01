@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const excelToJson = require("convert-excel-to-json");
-const sourceFile = { sourceFile: "//src//xlsx//FLUJO.xlsx" };
+const sourceFile = { sourceFile: "/etc/API/API-CET-JSON//src/xlsx/FLUJO.xlsx" };
 // /etc/API/API-CET-JSON//src/xlsx/FLUJO.xlsx
 ///etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx
 const sheets1 = { sheets: ["Carátula"] };
@@ -30,7 +30,7 @@ const callUrl = (url) => __awaiter(void 0, void 0, void 0, function* () {
     })
         .then((response) => __awaiter(void 0, void 0, void 0, function* () {
         console.log(response);
-        fs_1.default.writeFileSync('//src//xlsx//Cotizacion.xlsx', Buffer.from(response.data));
+        fs_1.default.writeFileSync('/etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx', Buffer.from(response.data));
         let Ejc = yield excelToJson(Object.assign(Object.assign(Object.assign({}, sourceFile), sheets1), { range: "G16", header: {
                 rows: 12,
             }, columnToKey: {

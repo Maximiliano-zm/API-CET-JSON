@@ -1,5 +1,5 @@
 const excelToJson = require("convert-excel-to-json");
-const sourceFile = { sourceFile: "//src//xlsx//FLUJO.xlsx" };
+const sourceFile = { sourceFile: "/etc/API/API-CET-JSON//src/xlsx/FLUJO.xlsx" };
 // /etc/API/API-CET-JSON//src/xlsx/FLUJO.xlsx
 ///etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx
 const sheets1 = { sheets: ["Carátula"] };
@@ -17,7 +17,7 @@ const callUrl = async (url: string) => {
     .then(async (response) => {
       console.log(response);
       fs.writeFileSync(
-        '//src//xlsx//Cotizacion.xlsx',
+        '/etc/API/API-CET-JSON//src/xlsx/Cotizacion.xlsx',
         Buffer.from(response.data)
       );
       
